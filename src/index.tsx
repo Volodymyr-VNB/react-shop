@@ -1,7 +1,7 @@
 import React from 'react'
 import ReactDOM from 'react-dom/client'
-const title = React.createElement('h1', { id: 'title' }, 'hellow react')
-console.log(title)
+// const title = React.createElement('h1', { id: 'title' }, 'hellow react')
+// console.log(title)
 // jsx
 // const app = (
 //     <div>
@@ -14,31 +14,40 @@ console.log(title)
 //         </p>
 //     </div>
 // )
+
+const Title = () => {
+    return <h1>Hello App component</h1>
+}
+const Content = () => {
+    return (
+        <>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Tempore facilis aperiam id, omnis voluptatem laboriosam quo ex
+                porro magni alias eum earum. At, est dolorem odit eaque nam
+                voluptates deserunt.
+            </p>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
+                Tempore facilis aperiam id, omnis voluptatem laboriosam quo ex
+                porro magni alias eum earum. At, est dolorem odit eaque nam
+                voluptates deserunt.
+            </p>
+        </>
+    )
+}
 const App = () => {
     return (
-        <div>
-            <h1>Hello App component</h1>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Tempore facilis aperiam id, omnis voluptatem laboriosam quo ex
-                porro magni alias eum earum. At, est dolorem odit eaque nam
-                voluptates deserunt.
-            </p>
-            <p>
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit.
-                Tempore facilis aperiam id, omnis voluptatem laboriosam quo ex
-                porro magni alias eum earum. At, est dolorem odit eaque nam
-                voluptates deserunt.
-            </p>
-            
-        </div>
+        <>
+            <Title />
+            <Content />
+        </>
     )
 }
 
 const root = ReactDOM.createRoot(document.getElementById('root') as HTMLElement)
 root.render(
     <React.StrictMode>
-        {' '}
-        <App />{' '}
+        <App />
     </React.StrictMode>
 )
