@@ -20,7 +20,7 @@ const Title = () => {
 }
 const Content = () => {
     return (
-        <>
+        <React.Fragment>
             <p>
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit.
                 Tempore facilis aperiam id, omnis voluptatem laboriosam quo ex
@@ -33,7 +33,7 @@ const Content = () => {
                 porro magni alias eum earum. At, est dolorem odit eaque nam
                 voluptates deserunt.
             </p>
-        </>
+        </React.Fragment>
     )
 }
 const App = () => {
