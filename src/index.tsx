@@ -3,9 +3,14 @@ import ReactDOM from 'react-dom/client'
 import './style.css'
 
 //  let a:string ="helloy"
-interface TitleProps{
+// interface TitleProps{
+//     title :string
+// }
+type TitleProps = {
     title :string
 }
+
+
 
 const Title =  (props: TitleProps) => {
     return <h1>Hello {props.title} component</h1>
