@@ -1,6 +1,7 @@
 type TitleProps = {
     title: string
     num?: number
+   
 }
 
 const Title = ({ title, num = 5 }: TitleProps) => {
