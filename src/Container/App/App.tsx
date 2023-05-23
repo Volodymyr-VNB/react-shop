@@ -1,8 +1,12 @@
+import Header from "Container/Header/Header"
+
 const App = () => {
-    return  <>
+    return  (
+    <>
+    <Header/>
+    </>)
     
-    <h1>heloy app</h1>
-    </>
+   
     
 }
 export default App
