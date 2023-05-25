@@ -14,14 +14,15 @@ import { groupEnd } from 'console';
 import { green } from '@mui/material/colors';
 
 
+
 type Props = {}
 
 const Header = (props: Props) => {
   return (
     <AppBar position="static" 
     className='fon' 
-    style={{ backgroundColor: green }} 
-    // sx={{ backgroundColor: green }} 
+    
+    
     >
       <Container className='fon'>
         <Toolbar>
