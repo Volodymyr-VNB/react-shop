@@ -8,7 +8,12 @@ import MenuIcon from '@mui/icons-material/Menu';
 
 import './Header.scss'
 import { Container } from '@mui/material';
+import Logo from 'components/Logo/Logo';
+import Menu from 'components/Menu/Menu';
+
+
 type Props = {}
+
 const Header = (props: Props) => {
   return (
     <AppBar position="static">
@@ -21,15 +26,17 @@ const Header = (props: Props) => {
             aria-label="menu"
             sx={{ mr: 2 }}
           >
+            
             <MenuIcon />
           </IconButton>
-          <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
-            News
-          </Typography>
-          <Button color="inherit">Login</Button>
+          <Logo />
+          <Menu/>
         </Toolbar>
         </Container>
       </AppBar>
+
+
+
   )
 }
 export default Header
