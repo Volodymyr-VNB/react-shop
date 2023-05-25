@@ -12,6 +12,7 @@ import Logo from 'components/Logo/Logo';
 import Menu from 'components/Menu/Menu';
 import { groupEnd } from 'console';
 import { green } from '@mui/material/colors';
+import CardHeader from 'components/CardHeader/CardHeader';
 
 
 
@@ -19,10 +20,8 @@ type Props = {}
 
 const Header = (props: Props) => {
   return (
-    <AppBar position="static" 
-    className='fon' 
-    
-    
+    <AppBar position="static"
+            className='fon' 
     >
       <Container className='fon'>
         <Toolbar>
@@ -38,6 +37,7 @@ const Header = (props: Props) => {
           </IconButton>
           <Logo />
           <Menu/>
+          <CardHeader/>
         </Toolbar>
         </Container>
       </AppBar>
