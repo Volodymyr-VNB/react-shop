@@ -1,11 +1,11 @@
-import ProductList from "components/Products/ProductList"
+import ProductList from 'components/Products/ProductList'
 
 type Props = {}
 const Home = (props: Props) => {
-  return (
-    <>
-    <ProductList/>
-    </>
-  )
+    return (
+        <>
+            <ProductList />
+        </>
+    )
 }
 export default Home
