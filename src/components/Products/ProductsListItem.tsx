@@ -38,7 +38,7 @@ onInctementClick =() =>{
 }
 onDectementClick =() =>{
   this.setState((prevState) => ({
-    count: prevState.count - 1,
+    count: prevState.count>1? prevState.count- 1: prevState.count,
   }))
 }
 
