@@ -7,7 +7,7 @@ import {
 } from '@mui/material'
 import './ProductsListItem.scss'
 import React from 'react'
-import { type } from 'os'
+
 
 type Props = {
     title: string

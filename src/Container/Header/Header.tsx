@@ -1,8 +1,8 @@
 import AppBar from '@mui/material/AppBar';
 
 import Toolbar from '@mui/material/Toolbar';
-import Typography from '@mui/material/Typography';
-import Button from '@mui/material/Button';
+// import Typography from '@mui/material/Typography';
+// import Button from '@mui/material/Button';
 import IconButton from '@mui/material/IconButton';
 import MenuIcon from '@mui/icons-material/Menu';
 
@@ -10,8 +10,8 @@ import './Header.scss'
 import { Container } from '@mui/material';
 import Logo from 'components/Logo/Logo';
 import Menu from 'components/Menu/Menu';
-import { groupEnd } from 'console';
-import { green } from '@mui/material/colors';
+// import { groupEnd } from 'console';
+// import { green } from '@mui/material/colors';
 import CardHeader from 'components/CardHeader/CardHeader';
 
 
