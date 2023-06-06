@@ -16,9 +16,13 @@ import CardHeader from 'components/CardHeader/CardHeader';
 
 
 
-type Props = {}
+type Props = {
+  cartData:{
+  totalCount: number
+    totalPrice: number}
+}
 
-const Header = (props: Props) => {
+const Header = ({cartData}: Props) => {
   return (
     <AppBar position="static"
             className='fon' 
@@ -37,7 +41,9 @@ const Header = (props: Props) => {
           </IconButton>
           <Logo />
           <Menu/>
-          <CardHeader/>
+          <CardHeader
+          cartData={cartData}
+          />
         </Toolbar>
         </Container>
       </AppBar>

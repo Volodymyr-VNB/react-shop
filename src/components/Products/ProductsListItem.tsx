@@ -25,7 +25,10 @@ const ProductsListItem = ({
     image,
 }: Props) => {
     const [count, setCount] = useState<number>(1)
-    const [color, setColor] = useState<string>("green")
+    // const [suma, setSuma] = useState<number>(0)
+    // const [countall, setCountall] = useState<number>(0)
+    
+    
 
     const onIncrementClick = () =>{
       setCount((prevState)=>prevState+1)
@@ -33,9 +36,10 @@ const ProductsListItem = ({
     const onDecrementClick = () =>{
       setCount((prevState)=>prevState-1)
     }
-    const onChengColor = () =>{
-      setColor((prevState)=> prevState==="green"? "red":"green" )
-    }
+    // const onSumClick = () =>{
+    //   setCountall((prevState)=>prevState + {this.state.count})
+    // }
+    
 
     return (
         <Card className="product" variant="outlined">
@@ -47,9 +51,7 @@ const ProductsListItem = ({
                 <p className="product-description">{description}</p>
                 <div className="product-features">Type:{type}</div>
                 <div className="product-features">Capacity:{capacity}</div>
-                <div className={color}>Color: {color}</div>
-                <button 
-                onClick={()=> onChengColor()}>Change color</button>
+                
                 <div className="product-price">Price: ${price}</div>
                 <div className="product-quantity">
                     <Button variant="outlined"
