@@ -3,7 +3,7 @@ import ProductsListItem from "./ProductsListItem"
 import productsArray from "utils/productArray"
 
 type Props = {}
-const ProductList = (props: Props) => {
+const ProductList = ({}: Props) => {
   return (
     <>
     <Typography component="h2" variant="h3" 
