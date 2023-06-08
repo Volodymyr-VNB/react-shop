@@ -3,7 +3,7 @@ import ProductsListItem from "./ProductsListItem"
 import productsArray from "utils/productArray"
 
 type Props = {
-  addProductToCart:(count:number,price:number)=>void
+  addProductToCart:(id:number, count: number)=>void
   // ProductsInCart :{    [id:number]:Number } 
 }
 const ProductList = ({addProductToCart}: Props) => {
@@ -17,6 +17,7 @@ const ProductList = ({addProductToCart}: Props) => {
           { productsArray.map(({id,title,description,type,capacity,price,image}) =>(
             <Grid item xs={12} sm={6} md={4} key={id}>
             <ProductsListItem 
+            id={id}
             image={image}
             title={title}
             description={description}
