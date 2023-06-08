@@ -15,6 +15,7 @@ type Props = {
     type: string
     price: number
     image: string
+    addProductToCart:(count:number,price:number)=>void
 }
 const ProductsListItem = ({
     title,
@@ -23,10 +24,10 @@ const ProductsListItem = ({
     capacity,
     price,
     image,
+    addProductToCart,
 }: Props) => {
     const [count, setCount] = useState<number>(1)
-    // const [suma, setSuma] = useState<number>(0)
-    // const [countall, setCountall] = useState<number>(0)
+    
     
     
 
@@ -65,7 +66,10 @@ const ProductsListItem = ({
                     >+</Button>
                 </div>
                 <CardActions className="bnt-wrap">
-                    <Button variant="outlined"> Add to cart </Button>
+                    <Button variant="outlined"
+                    onClick={()=> addProductToCart(count,price)}
+                    > 
+                    Add to cart </Button>
                 </CardActions>
             </CardContent>
         </Card>
