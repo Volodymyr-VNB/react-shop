@@ -16,6 +16,7 @@ type Props = {
     price: number
     image: string
     addProductToCart:(count:number,price:number)=>void
+    // ProductsInCart :{    [id:number]:Number }
 }
 const ProductsListItem = ({
     title,

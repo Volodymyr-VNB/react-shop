@@ -3,6 +3,7 @@ import Home from "Pages/Home/Home"
 
 type Props = {
   addProductToCart:(count:number,price:number)=>void
+ 
 }
 const Main = ({addProductToCart}: Props) => {
   return (
@@ -11,6 +12,7 @@ const Main = ({addProductToCart}: Props) => {
     }}
     >
        <Home
+      
        addProductToCart={addProductToCart}
        />
     </Container>

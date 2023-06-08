@@ -4,6 +4,7 @@ import productsArray from "utils/productArray"
 
 type Props = {
   addProductToCart:(count:number,price:number)=>void
+  // ProductsInCart :{    [id:number]:Number } 
 }
 const ProductList = ({addProductToCart}: Props) => {
   return (
