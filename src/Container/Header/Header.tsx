@@ -17,7 +17,7 @@ type Props = {
 
 const Header = ({ productsInCart }: Props) => {
     return (
-        <AppBar position="static" className="app-bar">
+        <AppBar position="static" className="fon">
             <Container>
                 <Toolbar className="test">
                     <IconButton

@@ -10,8 +10,8 @@ type ProductsInCart = {
 
 const App = () => {
     const [productsInCart, setProductsInCart] = useState<ProductsInCart>({
-        1: 5,
-        2: 10,
+        // 1: 5,
+        // 2: 1,
         
     })
 
@@ -26,9 +26,9 @@ const App = () => {
         <StyledEngineProvider injectFirst>
             <CssBaseline />
             <Header productsInCart={productsInCart} />
-            <button
+            {/* <button
             onClick={()=> addProductToCart(2,5)}
-            >Add to Cart(id:2,count:5)</button>
+            >Add to Cart(id:2,count:5)</button> */}
             <Main 
             addProductToCart={addProductToCart} 
             />
