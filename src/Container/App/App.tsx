@@ -1,12 +1,12 @@
 import Header from 'Container/Header/Header'
 import CssBaseline from '@mui/material/CssBaseline'
 import { StyledEngineProvider } from '@mui/material/styles'
-import Main from 'Container/Main/Main'
+
 import { useState } from 'react'
 import { Route, Routes } from 'react-router-dom'
 import Home from 'Pages/Home/Home'
 import { Container } from '@mui/material'
-import CartPage from 'Pages/Cart/CartPages'
+
 import CartPages from 'Pages/Cart/CartPages'
 
 type ProductsInCart = {
