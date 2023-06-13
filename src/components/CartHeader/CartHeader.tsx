@@ -29,7 +29,7 @@ const CartHeader = ({
             <div>
                 {Object.keys(productsInCart).map((productId) => (
                     <div key={productId}>
-                        {productsObject[parseInt(productId)].title}:{' '}
+                        {productsObject[parseInt(productId)].title}:
                         {productsInCart[parseInt(productId)]}
                         
                     </div>
@@ -38,7 +38,16 @@ const CartHeader = ({
                 ) }
             </div>
             
-            <div>Total: $ {total}</div>
+            <div>
+                Total: ${' '}
+                {Object.keys(productsInCart).reduce(
+                    (total, productId) =>
+                        total +
+                        productsInCart[parseInt(productId)] *
+                            productsObject[parseInt(productId)].price,
+                    0
+                )}
+            </div>
             
         </div>
     )
