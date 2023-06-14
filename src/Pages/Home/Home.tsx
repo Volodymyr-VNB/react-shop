@@ -7,7 +7,9 @@ type Props = {
 const Home = ({addProductToCart}: Props) => {
     return (
         <>
+        <br /><br /><br /><br />
             <ProductList  
+            
             // ProductsInCart={ProductsInCart}
             addProductToCart={addProductToCart}
             />
