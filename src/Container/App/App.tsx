@@ -8,10 +8,18 @@ import Home from 'Pages/Home/Home'
 import { Container } from '@mui/material'
 
 import CartPages from 'Pages/Cart/CartPages'
+import { type } from 'os'
+
+import { createContext } from 'react'
 
 type ProductsInCart = {
     [id: number]: number
 }
+type Context = {
+    removeProductFromCart: (id: number) => void
+}
+
+export const AppContext = createContext<Context | null>(null)
 
 const App = () => {
     const [productsInCart, setProductsInCart] = useState<ProductsInCart>({
@@ -37,24 +45,28 @@ const App = () => {
 
     return (
         <StyledEngineProvider injectFirst>
+            <AppContext.Provider value={{removeProductFromCart:removeProductFromCart,
+            }}
+            >
+
+
             <CssBaseline />
             <Header productsInCart={productsInCart} />
-            <button onClick={() => removeProductFromCart(1)}>
-                Remove product
-            </button>
+            
             <Container>
                 <Routes>
                     <Route
                         path="/"
                         element={<Home addProductToCart={addProductToCart} />}
                     />
-                    <Route path="/cart" element={<CartPages productsInCart={productsInCart} />} />
+                    <Route path="/cart" element={<CartPages 
+                    productsInCart={productsInCart} 
+                    
+                    />} />
                 </Routes>
             </Container>
 
-            {/* <Main 
-            addProductToCart={addProductToCart} 
-            /> */}
+            </AppContext.Provider>
         </StyledEngineProvider>
     )
 }

@@ -7,9 +7,10 @@ type Props = {
     productsInCart: {
         [id: number]: number
     }
+    
 }
 
-const CartPage = ({ productsInCart }: Props) => {
+const CartPage = ({ productsInCart}: Props) => {
     return (
         <div>
           <br /><br /><br /><br />

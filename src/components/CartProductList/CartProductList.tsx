@@ -8,6 +8,8 @@ type Props = {
         [id: number]: Product
     }
     CartItem?:any,
+   
+    
 }
 const CartProductList = ({
     productsInCart,

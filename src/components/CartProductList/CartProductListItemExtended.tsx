@@ -6,6 +6,7 @@ import { useState } from 'react'
 type Props = {
     product: Product
     productCount: number
+    
 }
 const CartProductListItemExtended = ({ product, productCount }: Props) => {
 const  [employee, setEmployee] = useState(product);
