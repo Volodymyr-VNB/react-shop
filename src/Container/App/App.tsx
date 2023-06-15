@@ -13,11 +13,13 @@ import { type } from 'os'
 import { createContext } from 'react'
 import { omit } from 'lodash'
 
+
 type ProductsInCart = {
     [id: number]: number
 }
 type Context = {
     removeProductFromCart: (id: number) => void
+    changeProductQuantity:(id: number, count:number) => void
 }
 
 export const AppContext = createContext<Context | null>(null)
@@ -40,11 +42,24 @@ const App = () => {
            
         )
     }
-
+    // const onIncrementClick = (count:number) =>{
+    //     setProductsInCart((prevState)=>count +1)
+    //   }
+    //   const onDecrementClick1 = () =>{
+    //     setProductsInCart((prevState)=>prevState-1)
+    //   }
+    const changeProductQuantity = (id: number, count: number) => {
+        setProductsInCart((prevState) => ({
+            ...prevState,
+            [id]: count,
+        }))
+    }
 
     return (
         <StyledEngineProvider injectFirst>
             <AppContext.Provider value={{removeProductFromCart:removeProductFromCart,
+            changeProductQuantity:changeProductQuantity
+
             }}
             >
 
