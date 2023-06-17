@@ -13,7 +13,7 @@ const Quantity = ({count,onDecrementClick,onIncrementClick}: Props) => {
     <div className="product-quantity">
                     <Button variant="outlined"
                     onClick={()=> onDecrementClick()}
-                    disabled={count <=1}
+                    disabled={count <=0}
                     >-</Button>
                     <TextField value={count} size="small"></TextField>
                     <Button variant="outlined"
