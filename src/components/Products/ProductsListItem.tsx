@@ -61,6 +61,7 @@ const ProductsListItem = ({
                 <Quantity count={count} 
                 onDecrementClick={onDecrementClick}
                 onIncrementClick={onIncrementClick}
+                mincount={1}
                 />
                 {/* <div className="product-quantity">
                     <Button variant="outlined"
