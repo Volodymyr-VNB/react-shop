@@ -13,6 +13,7 @@ import Quantity from 'components/Quantity/Quantity'
 import { useAppDispatch, useAppSelector } from 'redux/hooks';
 import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
 import FavoriteIcon from '@mui/icons-material/Favorite';
+import { Link } from 'react-router-dom';
 type Props = {
     title: string
     description: string
@@ -64,8 +65,11 @@ const ProductsListItem = ({
                 <div className="product-img">
                     <img src={image} alt="" />
                 </div>
-                <h4 className="product-title">{title}</h4>
-                <p className="product-description">{description}</p>
+                <h4 className="product-title">
+                    <Link to={`/product/${id}`}>{title}</Link></h4>
+                <p className="product-description"
+                dangerouslySetInnerHTML={{__html:description}}
+                ></p>
                 <div className="product-features">Type:{type}</div>
                 <div className="product-features">Capacity:{capacity}</div>
                 
