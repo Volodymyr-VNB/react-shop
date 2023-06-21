@@ -9,6 +9,10 @@ import './ProductsListItem.scss'
 import { useState } from 'react'
 import Quantity from 'components/Quantity/Quantity'
 
+
+import { useAppDispatch, useAppSelector } from 'redux/hooks';
+import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
+import FavoriteIcon from '@mui/icons-material/Favorite';
 type Props = {
     title: string
     description: string
@@ -44,11 +48,19 @@ const ProductsListItem = ({
     // const onSumClick = () =>{
     //   setCountall((prevState)=>prevState + {this.state.count})
     // }
-    
+    const isLikes = useAppSelector((state)=> state.productsLikeState[id])
+    const dispatch = useAppDispatch()
 
     return (
         <Card className="product" variant="outlined">
             <CardContent>
+                <Button variant='outlined'
+                onClick={()=> dispatch({
+                    type: "TOGGLE_LIKE",
+                    id, //=>id:id
+                })}>
+                    {isLikes? <FavoriteIcon/>: <FavoriteBorderIcon/>}
+                </Button>
                 <div className="product-img">
                     <img src={image} alt="" />
                 </div>
