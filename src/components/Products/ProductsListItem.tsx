@@ -10,9 +10,7 @@ import { useState } from 'react'
 import Quantity from 'components/Quantity/Quantity'
 
 
-import { useAppDispatch, useAppSelector } from 'redux/hooks';
-import FavoriteBorderIcon from '@mui/icons-material/FavoriteBorder';
-import FavoriteIcon from '@mui/icons-material/Favorite';
+
 import Likeds from 'components/Likeds/Likeds';
 type Props = {
     title: string
